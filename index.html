@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JavaScript</title>
+</head>
+
+<body>
+
+	<table border="1" align="center">
+		<tr>
+			<td>FirstNames</td>
+			<td><input type="text" name="fname" id="fname"></td>
+		</tr>
+		<tr>
+			<td>LastName</td>
+			<td><input type="text" name="lname" id="lname"></td>
+		</tr>
+		<tr>
+			<td>Address</td>
+			<td><input type="text" name="add" id="add"></td>
+		</tr>
+		<tr>
+			<td>Mobile no.</td>
+			<td><input type="number" name="mobile" id="mobile"></td>
+		</tr>
+		<tr>
+			<td>DOB</td>
+			<td><input type="date" name="dob" id="dob"></td>
+		</tr>
+		<tr>
+			<td colspan="2" align="center"><input type="button" value="Submit" name="submit" id="submit" onclick="display()" /></td>
+		</tr>
+	</table>
+
+	<table border="1">
+		<tr>
+			<td>
+				<div id="fname1"></div>
+			</td>
+		</tr>
+	</table>
+
+	<script>
+		function display(){
+			var con = confirm("Are you sure ?");
+			console.log(con);
+			if(con){
+				console.log(document.getElementById("fname").value);
+
+				document.getElementById("fname1").innerHTML = document.getElementById("fname").value;
+			}
+		}
+	</script>
+
+</body>
+
+</html>
